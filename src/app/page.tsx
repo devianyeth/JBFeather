@@ -1,17 +1,28 @@
+
 import { Inter } from "@next/font/google";
 import styles from "./page.module.css";
-import { Roboto_Mono as Font } from "@next/font/google";
+
+import Card from "@/components/Card/Card";
+import SearchBox from "@/components/SearchBox/SearchBox";
+import useProject from "@/hooks/useProject";
+
 const inter = Inter({ subsets: ["latin"] });
 
-const font = Font({
-  weight: ["400", "500", "700", "600"],
-  display: "auto",
-  subsets: ["latin"],
-});
-export default function Home() {
+export default function Home(props: any) {
+
   return (
-    <main className={`${styles.main} ${font.className}`}>
-      <h1>Juicebox x Feather</h1>
+    <main className={styles.main}>
+      <div className={styles.content}>
+        <h1>🧃x🪶</h1>
+        <br></br>
+        <p className={styles.subtext}>
+          Interact with 🧃Juicebox projects without a pre-existing wallet using
+          🪶Feather
+        </p>
+
+        <SearchBox />
+        {/* <Card /> */}
+      </div>
     </main>
   );
 }

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import Router from "next/router";
 import Link from "next/link";
-
 import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function LoginPage() {
@@ -15,6 +13,7 @@ export default function LoginPage() {
       </>
     );
   }
+
   return (
     <>
       <h1>Login to Example</h1>

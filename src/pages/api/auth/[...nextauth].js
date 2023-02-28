@@ -27,6 +27,10 @@ const KeypProvider = {
 };
 
 export default NextAuth({
+  pages: {
+    signIn: "/login",
+    error: "/login", // Error code passed in query string as ?error=
+  },
   secret: process.env.TOKEN_SECRET,
   providers: [KeypProvider],
   callbacks: {
